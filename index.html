@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Guess the Correct Color!</h1>
+        <p id="score" data-testid="score">Score: 0</p>
+        <div id="colorBox" data-testid="colorBox" class="color-box"></div>
+
+        <div id="colorOptions"></div>
+
+        <p data-testid="gameInstructions">Click the color that matches the box above.</p>
+        <p id="gameStatus" data-testid="gameStatus" class="status"></p>
+
+
+        <button id="newGameButton" data-testid="newGameButton" class="button">New Game</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
