@@ -3,7 +3,7 @@ let targetColor = '';
 let score = 0;
 
 const colorBox = document.getElementById('colorBox');
-const colorOptions = document.getElementById('colorOptions');
+const colorOption = document.getElementById('colorOption');
 const gameStatus = document.getElementById('gameStatus');
 const scoreDisplay = document.getElementById('score');
 const newGameButton = document.getElementById('newGameButton');
@@ -19,7 +19,7 @@ function startNewGame() {
 function generateNewColor() {
     targetColor = colors[Math.floor(Math.random() * colors.length)];
     colorBox.style.backgroundColor = targetColor;
-    colorOptions.innerHTML = '';
+    colorOption.innerHTML = '';
 
     colors.forEach(color => {
         const btn = document.createElement('div');
@@ -27,7 +27,7 @@ function generateNewColor() {
         btn.style.backgroundColor = color;
         btn.setAttribute('data-testid', 'colorOption');
         btn.addEventListener('click', () => handleGuess(color));
-        colorOptions.appendChild(btn);
+        colorOption.appendChild(btn);
     });
 }
 
